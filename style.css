@@ -72,7 +72,7 @@ header .content {
 header .content .img {
   width: 99%;
 }
-header .content .img img {
+img {
   width: 62%;
   height: auto;
 }
@@ -100,7 +100,53 @@ header .content .text {
 .wave .shape-fill {
   fill: #ffffff;
 }
-
+/************** Slider ****************/
+.clients {
+  text-align: center;
+  padding: 40px;
+}
+.slider {
+  height: 200px;
+  width: 60%;
+  background-color: #0c75b7;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+/************** Video Library ****************/
+.division {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.division__box {
+  border: 1px solid #0c75b7;
+  background-color: #fc841c;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px 10px 15px;
+  position: relative;
+}
+.division__icon {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+.division__title {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.division__title span {
+  color: rgba(10, 1, 1, 0.774);
+}
+.division__para {
+  text-align: end;
+  font-size: 16px;
+}
 /************** Footer *****************/
 footer {
   width: 100%;
