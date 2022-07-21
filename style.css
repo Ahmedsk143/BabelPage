@@ -78,6 +78,7 @@ header .content .img img {
 }
 header .content .text {
   text-align: end;
+  margin-top: 35px;
 }
 .wave {
   position: absolute;
