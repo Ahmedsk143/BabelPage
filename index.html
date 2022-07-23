@@ -17,7 +17,9 @@
     <header>
       <div class="container">
         <nav>
-          <div class="logo">BABEL</div>
+          <div class="logo">
+            <img src="./assets/Logo.svg" alt="" />
+          </div>
           <ul>
             <li>
               <a href="#">الصفحة الرئيسية</a>
@@ -34,11 +36,8 @@
           </ul>
         </nav>
         <div class="content">
-          <div class="img">
-            <img
-              src="https://pngimg.com/uploads/computer_pc/computer_pc_PNG17497.png"
-              alt=""
-            />
+          <div class="img d-none d-md-block">
+            <img src="./assets//screens.png" alt="" />
           </div>
           <div class="text">
             <h2>تستحق شركتك برنامج</h2>
@@ -49,26 +48,13 @@
               دائما هانكون علي تواصل بك
             </p>
             <button class="button button--outline mr-4">
-              <a href="#"> تعرف علي البرنامج</a>
+              <a href="#know-more"> تعرف علي البرنامج</a>
             </button>
             <button class="button button--primary">
               <a href="#"> عرض سعر</a>
             </button>
           </div>
         </div>
-      </div>
-      <div class="wave">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"
-          ></path>
-        </svg>
       </div>
     </header>
     <section class="clients">
@@ -77,47 +63,1060 @@
         <div class="slider"></div>
       </div>
     </section>
-    <main>
+    <main id="know-more">
       <div class="container">
         <div class="row">
-          <div class="col-8"></div>
-          <div class="col-4">
-            <div class="division">
-              <div class="division__box">
-                <img
-                  src="https://pngimg.com/uploads/computer_pc/computer_pc_PNG17497.png"
-                  alt=""
-                />
-                <div class="division__icon">
-                  <img src="./icons8-play-button-circled-40.png" alt="" />
-                </div>
+          <div class="col-8">
+            <!-- Playlist for organization 1 -->
+            <div class="playlist active" id="playlist-1">
+              <!-- <div class="playlist-arrow">
+                <img src="./assets//right arrow.svg" alt="" />
+              </div> -->
+              <div class="playlist-header">
+                <form class="search-bar" id="form-1">
+                  <input
+                    type="text"
+                    placeholder="ابحث عن مايدور في ذهنك"
+                    dir="rtl"
+                  />
+                  <img src="./assets/searchIcon.png" alt="" />
+                </form>
+                <button class="button button--primary">
+                  <span>!</span>طرح سؤال
+                </button>
               </div>
-              <div class="division__title">
-                <span>الاصدار: 20.21.25</span>
-                <h4>الأدارة المالية</h4>
-              </div>
-              <div class="division__para">
-                المنظومة عبارة عن دورة عمل تبدأ من الدليل المحاسبي ثم الدورة
-                المستندية ثم اعمال التدقيق والمراجعة ثم استخراج
-              </div>
+              <ul class="playlist-items">
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      فكرة التعامل التكاملي مثل الترابط بين الادارات
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                      onclick="showVideo('https://www.youtube.com/embed/M2nejllFJbM')"
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      فكرة التعامل التكاملي مثل الترابط بين الادارات
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      فكرة التعامل التكاملي مثل الترابط بين الادارات
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+              </ul>
             </div>
-            <div class="division">
-              <div class="division__box">
-                <img
-                  src="https://pngimg.com/uploads/computer_pc/computer_pc_PNG17497.png"
-                  alt=""
-                />
-                <div class="division__icon">
-                  <img src="./icons8-play-button-circled-40.png" alt="" />
+            <!-- Playlist for organization 2 -->
+            <div class="playlist" id="playlist-2">
+              <div class="playlist-header">
+                <form class="search-bar" id="form-2">
+                  <input
+                    type="text"
+                    placeholder="ابحث عن مايدور في ذهنك"
+                    dir="rtl"
+                  />
+                  <img src="./assets/searchIcon.png" alt="" />
+                </form>
+                <button class="button button--primary">
+                  <span>!</span>طرح سؤال
+                </button>
+              </div>
+              <ul class="playlist-items">
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Playlist for organization 3 -->
+            <div class="playlist" id="playlist-3">
+              <div class="playlist-header">
+                <form class="search-bar" id="form-3">
+                  <input
+                    type="text"
+                    placeholder="ابحث عن مايدور في ذهنك"
+                    dir="rtl"
+                  />
+                  <img src="./assets/searchIcon.png" alt="" />
+                </form>
+                <button class="button button--primary">
+                  <span>!</span>طرح سؤال
+                </button>
+              </div>
+              <ul class="playlist-items">
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Playlist for organization 4 -->
+            <div class="playlist" id="playlist-4">
+              <div class="playlist-header">
+                <form class="search-bar" id="form-4">
+                  <input
+                    type="text"
+                    placeholder="ابحث عن مايدور في ذهنك"
+                    dir="rtl"
+                  />
+                  <img src="./assets/searchIcon.png" alt="" />
+                </form>
+                <button class="button button--primary">
+                  <span>!</span>طرح سؤال
+                </button>
+              </div>
+              <ul class="playlist-items">
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Playlist for organization 5 -->
+            <div class="playlist" id="playlist-5">
+              <div class="playlist-header">
+                <form class="search-bar" id="form-5">
+                  <input
+                    type="text"
+                    placeholder="ابحث عن مايدور في ذهنك"
+                    dir="rtl"
+                  />
+                  <img src="./assets/searchIcon.png" alt="" />
+                </form>
+                <button class="button button--primary">
+                  <span>!</span>طرح سؤال
+                </button>
+              </div>
+              <ul class="playlist-items">
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Playlist for organization 6 -->
+            <div class="playlist" id="playlist-6">
+              <div class="playlist-header">
+                <form class="search-bar" id="form-6">
+                  <input
+                    type="text"
+                    placeholder="ابحث عن مايدور في ذهنك"
+                    dir="rtl"
+                  />
+                  <img src="./assets/searchIcon.png" alt="" />
+                </form>
+                <button class="button button--primary">
+                  <span>!</span>طرح سؤال
+                </button>
+              </div>
+              <ul class="playlist-items">
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Playlist for organization 7 -->
+            <div class="playlist" id="playlist-7">
+              <div class="playlist-header">
+                <form class="search-bar" id="form-7">
+                  <input
+                    type="text"
+                    placeholder="ابحث عن مايدور في ذهنك"
+                    dir="rtl"
+                  />
+                  <img src="./assets/searchIcon.png" alt="" />
+                </form>
+                <button class="button button--primary">
+                  <span>!</span>طرح سؤال
+                </button>
+              </div>
+              <ul class="playlist-items">
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      تخصيص 11 منظومة لخدمة جميع اقسام الشركة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      ايقونة البحث العام تسمح لك بالبحث عن اي معلومة
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets/soundcloud-play.png"
+                      alt=""
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="divisions">
+              <!-- Organization 1 -->
+              <div class="division">
+                <div class="playlist-arrow active">
+                  <img src="./assets//right arrow.svg" alt="" />
+                </div>
+                <div class="division__box">
+                  <img
+                    class="box-img"
+                    data-target="#playlist-1"
+                    src="./assets//screens.svg"
+                    alt=""
+                  />
+                  <img
+                    class="box-play"
+                    src="./assets/icons8-play-button-circled-40.png"
+                    alt=""
+                    onclick="showVideo('https\://www.youtube.com/embed/D4eV7xCtlC8')"
+                  />
+                </div>
+                <div class="division__title">
+                  <span>الاصدار: 20.21.25</span>
+                  <h4>الأدارة المالية</h4>
+                </div>
+                <div class="division__para">
+                  المنظومة عبارة عن دورة عمل تبدأ من الدليل المحاسبي ثم الدورة
+                  المستندية ثم اعمال التدقيق والمراجعة ثم استخراج
                 </div>
               </div>
-              <div class="division__title">
-                <span>الاصدار: 20.21.25</span>
-                <h4>المقاولات العامة</h4>
+              <!-- Organization 2 -->
+              <div class="division">
+                <div class="playlist-arrow">
+                  <img src="./assets//right arrow.svg" alt="" />
+                </div>
+                <div class="division__box">
+                  <img
+                    class="box-img"
+                    src="./assets//screens.svg"
+                    alt=""
+                    data-target="#playlist-2"
+                  />
+                  <img
+                    class="box-play"
+                    src="./assets/icons8-play-button-circled-40.png"
+                    alt=""
+                  />
+                </div>
+                <div class="division__title">
+                  <span>الاصدار: 20.21.25</span>
+                  <h4>الأدارة المالية</h4>
+                </div>
+                <div class="division__para">
+                  المنظومة عبارة عن دورة عمل تبدأ من الدليل المحاسبي ثم الدورة
+                  المستندية ثم اعمال التدقيق والمراجعة ثم استخراج
+                </div>
               </div>
-              <div class="division__para">
-                تهدف هذة المنظومة الي تطوير مستوى المتابعات والمستخلصات وادارة
-                العقود وخطابات الضمان بشكل عام
+              <!-- Organization 3 -->
+              <div class="division">
+                <div class="playlist-arrow">
+                  <img src="./assets//right arrow.svg" alt="" />
+                </div>
+                <div class="division__box">
+                  <img
+                    class="box-img"
+                    src="./assets//screens.svg"
+                    alt=""
+                    data-target="#playlist-3"
+                  />
+                  <img
+                    class="box-play"
+                    src="./assets/icons8-play-button-circled-40.png"
+                    alt=""
+                  />
+                </div>
+                <div class="division__title">
+                  <span>الاصدار: 20.21.25</span>
+                  <h4>الأدارة المالية</h4>
+                </div>
+                <div class="division__para">
+                  المنظومة عبارة عن دورة عمل تبدأ من الدليل المحاسبي ثم الدورة
+                  المستندية ثم اعمال التدقيق والمراجعة ثم استخراج
+                </div>
+              </div>
+              <!-- Organization 4 -->
+              <div class="division">
+                <div class="playlist-arrow">
+                  <img src="./assets//right arrow.svg" alt="" />
+                </div>
+                <div class="division__box">
+                  <img
+                    class="box-img"
+                    src="./assets//screens.svg"
+                    alt=""
+                    data-target="#playlist-4"
+                  />
+                  <img
+                    class="box-play"
+                    src="./assets/icons8-play-button-circled-40.png"
+                    alt=""
+                  />
+                </div>
+                <div class="division__title">
+                  <span>الاصدار: 20.21.25</span>
+                  <h4>الأدارة المالية</h4>
+                </div>
+                <div class="division__para">
+                  المنظومة عبارة عن دورة عمل تبدأ من الدليل المحاسبي ثم الدورة
+                  المستندية ثم اعمال التدقيق والمراجعة ثم استخراج
+                </div>
+              </div>
+              <!-- Organization 5 -->
+              <div class="division">
+                <div class="playlist-arrow">
+                  <img src="./assets//right arrow.svg" alt="" />
+                </div>
+                <div class="division__box">
+                  <img
+                    class="box-img"
+                    src="./assets//screens.svg"
+                    alt=""
+                    data-target="#playlist-5"
+                  />
+                  <img
+                    class="box-play"
+                    src="./assets/icons8-play-button-circled-40.png"
+                    alt=""
+                  />
+                </div>
+                <div class="division__title">
+                  <span>الاصدار: 20.21.25</span>
+                  <h4>الأدارة المالية</h4>
+                </div>
+                <div class="division__para">
+                  المنظومة عبارة عن دورة عمل تبدأ من الدليل المحاسبي ثم الدورة
+                  المستندية ثم اعمال التدقيق والمراجعة ثم استخراج
+                </div>
+              </div>
+              <!-- Organization  6 -->
+              <div class="division">
+                <div class="playlist-arrow">
+                  <img src="./assets//right arrow.svg" alt="" />
+                </div>
+                <div class="division__box">
+                  <img
+                    class="box-img"
+                    src="./assets//screens.svg"
+                    alt=""
+                    data-target="#playlist-6"
+                  />
+                  <img
+                    class="box-play"
+                    src="./assets/icons8-play-button-circled-40.png"
+                    alt=""
+                  />
+                </div>
+                <div class="division__title">
+                  <span>الاصدار: 20.21.25</span>
+                  <h4>الأدارة المالية</h4>
+                </div>
+                <div class="division__para">
+                  المنظومة عبارة عن دورة عمل تبدأ من الدليل المحاسبي ثم الدورة
+                  المستندية ثم اعمال التدقيق والمراجعة ثم استخراج
+                </div>
+              </div>
+              <!-- Organization 7 -->
+              <div class="division">
+                <div class="playlist-arrow">
+                  <img src="./assets//right arrow.svg" alt="" />
+                </div>
+                <div class="division__box">
+                  <img
+                    class="box-img"
+                    src="./assets//screens.svg"
+                    alt=""
+                    data-target="#playlist-7"
+                  />
+                  <img
+                    class="box-play"
+                    src="./assets/icons8-play-button-circled-40.png"
+                    alt=""
+                  />
+                </div>
+                <div class="division__title">
+                  <span>الاصدار: 20.21.25</span>
+                  <h4>الأدارة المالية</h4>
+                </div>
+                <div class="division__para">
+                  المنظومة عبارة عن دورة عمل تبدأ من الدليل المحاسبي ثم الدورة
+                  المستندية ثم اعمال التدقيق والمراجعة ثم استخراج
+                </div>
               </div>
             </div>
           </div>
@@ -145,7 +1144,6 @@
               </p>
             </div>
           </div>
-
           <div class="col-12 col-md-4">
             <div class="payment">
               <h4 class="footer--title">طرق الدفع</h4>
@@ -163,32 +1161,32 @@
             <div class="contact">
               <h4 class="footer--title">اتصل بنا</h4>
               <div class="phone">
-                <img src="./saudi-arabia.svg" alt="" class="icon" />
+                <img src="./assets/saudi-arabia.svg" alt="" class="icon" />
                 <img
                   class="icon"
-                  src="./whatsapp-social-media-svgrepo-com.svg"
+                  src="./assets/whatsapp-social-media-svgrepo-com.svg"
                   alt=""
                 />
                 <span>009665971141411</span>
               </div>
               <div class="phone">
-                <img src="./egypt.svg" alt="" class="icon" />
+                <img src="./assets/egypt.svg" alt="" class="icon" />
                 <img
                   class="icon"
-                  src="./whatsapp-social-media-svgrepo-com.svg"
+                  src="./assets/whatsapp-social-media-svgrepo-com.svg"
                   alt=""
                 />
                 <span class="number">00201093053052</span>
               </div>
               <div class="social">
                 <a href="https://linkedin.com/" target="_blank">
-                  <img src="./linkedin-round-color.svg" alt="" />
+                  <img src="./assets/linkedin-round-color.svg" alt="" />
                 </a>
                 <a href="https://twitter.com/" target="_blank">
-                  <img src="./twitter-round-color.svg" alt="" />
+                  <img src="./assets/twitter-round-color.svg" alt="" />
                 </a>
                 <a href="https://www.youtube.com/" target="_blank">
-                  <img src="./youtube-round-color.svg" alt="" />
+                  <img src="./assets/youtube-round-color.svg" alt="" />
                 </a>
               </div>
             </div>
@@ -196,5 +1194,17 @@
         </div>
       </div>
     </footer>
+    <div id="popup-video" onclick="hideVideo()">
+      <iframe
+        width="70%"
+        height="75%"
+        src="https://www.youtube.com/embed/D4eV7xCtlC8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
