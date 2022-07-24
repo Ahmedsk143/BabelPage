@@ -11,18 +11,42 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/559b1efbca.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Babel</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://babel-cloud.sfo2.cdn.digitaloceanspaces.com/images/logo-babel.svg"
+    />
   </head>
   <body>
     <header>
       <div class="container">
         <nav>
           <div class="logo">
-            <img src="./assets/Logo.svg" alt="" />
+            <div class="menu-bar" onclick="showMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <a href="#">
+              <img src="./assets/Logo.svg" alt="" />
+            </a>
           </div>
-          <ul>
+          <ul id="menu">
             <li>
-              <a href="#">الصفحة الرئيسية</a>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              <a href="#">الرئيسية</a>
             </li>
             <li>
               <a href="#">حلول عامة</a>
@@ -36,7 +60,7 @@
           </ul>
         </nav>
         <div class="content">
-          <div class="img d-none d-md-block">
+          <div class="img">
             <img src="./assets//screens.png" alt="" />
           </div>
           <div class="text">
@@ -57,10 +81,114 @@
         </div>
       </div>
     </header>
-    <section class="clients">
+    <section id="testim" class="testim">
       <div class="container">
-        <h2>Clients Reviews</h2>
-        <div class="slider"></div>
+        <h2>آراء العملاء</h2>
+        <div class="testim-cover">
+          <div class="wrap">
+            <span
+              id="right-arrow"
+              class="arrow right fa fa-chevron-right"
+            ></span>
+            <span id="left-arrow" class="arrow left fa fa-chevron-left"></span>
+            <ul id="testim-dots" class="dots">
+              <li class="dot active"></li>
+              <li class="dot"></li>
+              <li class="dot"></li>
+              <li class="dot"></li>
+            </ul>
+            <div id="testim-content" class="cont">
+              <div class="active">
+                <div class="img">
+                  <img
+                    src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"
+                    alt=""
+                  />
+                </div>
+                <h2>
+                  <a
+                    href="https://www.linkedin.com/in/ahmedsk143/"
+                    target="_blank"
+                  >
+                    Mr.Sayed
+                    <img class="external" src="./assets/external.png" alt="" />
+                  </a>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+
+              <div>
+                <div class="img">
+                  <img
+                    src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-vector-user-young-boy-avatar-icon-png-image_4827810.jpg"
+                    alt=""
+                  />
+                </div>
+                <h2>
+                  <a
+                    href="https://www.linkedin.com/in/ahmedsk143/"
+                    target="_blank"
+                  >
+                    Mr.Ahmed
+                    <img class="external" src="./assets/external.png" alt="" />
+                  </a>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+
+              <div>
+                <div class="img">
+                  <img
+                    src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"
+                    alt=""
+                  />
+                </div>
+                <h2>
+                  <a
+                    href="https://www.linkedin.com/in/ahmedsk143/"
+                    target="_blank"
+                  >
+                    Mr.Khalil
+                    <img class="external" src="./assets/external.png" alt="" />
+                  </a>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+
+              <div>
+                <div class="img">
+                  <img
+                    src="https://png.pngtree.com/png-clipart/20200225/original/pngtree-air-hostess-avatar-icon-vector-download-png-image_5257565.jpg"
+                    alt=""
+                  />
+                </div>
+                <h2>
+                  <a href="#">
+                    Mrs. Amira
+                    <img class="external" src="./assets/external.png" alt="" />
+                  </a>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <main id="know-more">
@@ -69,9 +197,6 @@
           <div class="col-8">
             <!-- Playlist for organization 1 -->
             <div class="playlist active" id="playlist-1">
-              <!-- <div class="playlist-arrow">
-                <img src="./assets//right arrow.svg" alt="" />
-              </div> -->
               <div class="playlist-header">
                 <form class="search-bar" id="form-1">
                   <input
@@ -1126,14 +1251,14 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
             <div class="to-customers">
               <h4 class="footer--title">عملائنا</h4>
               <p>
                 <span>الابتكار, وسهولة الاستخدام, والدقة. هذه</span>
                 <span>ليست مجرد أسباب تجعل شركات المقاولات</span>
                 <span>
-                  .لمساعدتهاعلي النجاح <span>Babel</span> تعتمد على برنامج
+                  .لمساعدتها علي النجاح <span>Babel</span> تعتمد على برنامج
                 </span>
                 <span> تعرف علي قاعدة عملائنا لعرفة ما الذي يجعل</span>
                 <span>
@@ -1144,49 +1269,97 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
             <div class="payment">
               <h4 class="footer--title">طرق الدفع</h4>
               <ul>
-                <li class="green dot">البنك الاهلي المصري (جنية مصري)</li>
-                <li class="green dot">البنك الاهلي المصري (دولار)</li>
-                <li class="blue dot">مصرف الراجحي (ريال سعودي)</li>
-                <li class="orange dot">التجاري وفا بنك (جنية مصري)</li>
-                <li class="orange dot">التجاري وفا بنك (دولار)</li>
-                <li class="red dot">فودافون كاش</li>
+                <li class="green dot" onclick="showPop(1)">
+                  البنك الاهلي المصري (جنية مصري)
+                </li>
+                <li class="green dot" onclick="showPop(2)">
+                  البنك الاهلي المصري (دولار)
+                </li>
+                <li class="blue dot" onclick="showPop(3)">
+                  مصرف الراجحي (ريال سعودي)
+                </li>
+                <li class="orange dot" onclick="showPop(4)">
+                  التجاري وفا بنك (جنية مصري)
+                </li>
+                <li class="orange dot" onclick="showPop(5)">
+                  التجاري وفا بنك (دولار)
+                </li>
+                <li class="red dot" onclick="showPop(6)">فودافون كاش</li>
+
+                <div class="payment-popup">
+                  <img src="./assets//AhlyImg.svg" alt="" />
+                  <div class="popup-item i-1">
+                    <span class="key"></span>
+                    <span class="value"></span>
+                  </div>
+                  <div class="popup-item i-2">
+                    <span class="key"></span>
+                    <span class="value"></span>
+                  </div>
+                  <div
+                    class="popup-item i-3"
+                    dir="rtl"
+                    style="text-align: start"
+                  >
+                    <span class="key"></span>
+                    <span class="value"></span>
+                  </div>
+                  <div class="popup-item i-4">
+                    <span class="key"></span>
+                    <span class="value"></span>
+                  </div>
+                  <div class="popup-item i-5" style="text-align: start">
+                    <span class="key"></span>
+                    <span class="value"></span>
+                  </div>
+                  <div
+                    class="popup-item i-6"
+                    dir="rtl"
+                    style="text-align: start"
+                  >
+                    <span class="key"></span>
+                    <span class="value"></span>
+                  </div>
+                </div>
               </ul>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
             <div class="contact">
               <h4 class="footer--title">اتصل بنا</h4>
               <div class="phone">
                 <img src="./assets/saudi-arabia.svg" alt="" class="icon" />
-                <img
-                  class="icon"
-                  src="./assets/whatsapp-social-media-svgrepo-com.svg"
-                  alt=""
-                />
+                <a
+                  target="_blank"
+                  href="https://web.whatsapp.com/send?phone=201093053052&text=أريد الإستفسار عن ... "
+                >
+                  <img class="icon" src="./assets/whatsapp.svg" alt="" />
+                </a>
                 <span>009665971141411</span>
               </div>
               <div class="phone">
                 <img src="./assets/egypt.svg" alt="" class="icon" />
-                <img
-                  class="icon"
-                  src="./assets/whatsapp-social-media-svgrepo-com.svg"
-                  alt=""
-                />
+                <a
+                  target="_blank"
+                  href="https://web.whatsapp.com/send?phone=201093053052&text=أريد الإستفسار عن ... "
+                >
+                  <img class="icon" src="./assets/whatsapp.svg" alt=""
+                /></a>
                 <span class="number">00201093053052</span>
               </div>
               <div class="social">
                 <a href="https://linkedin.com/" target="_blank">
-                  <img src="./assets/linkedin-round-color.svg" alt="" />
+                  <img src="./assets/linkedin.svg" alt="" />
                 </a>
                 <a href="https://twitter.com/" target="_blank">
-                  <img src="./assets/twitter-round-color.svg" alt="" />
+                  <img src="./assets/twitter.svg" alt="" />
                 </a>
                 <a href="https://www.youtube.com/" target="_blank">
-                  <img src="./assets/youtube-round-color.svg" alt="" />
+                  <img src="./assets/youtube.svg" alt="" />
                 </a>
               </div>
             </div>
@@ -1198,7 +1371,7 @@
       <iframe
         width="70%"
         height="75%"
-        src="https://www.youtube.com/embed/D4eV7xCtlC8"
+        src=""
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
