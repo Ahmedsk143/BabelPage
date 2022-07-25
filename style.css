@@ -867,6 +867,7 @@ footer {
   padding-right: 75px;
   text-align: end;
   margin-top: 200px;
+  overflow: hidden;
 }
 .footer--title {
   font-size: 25px;
