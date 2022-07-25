@@ -764,7 +764,8 @@ header .content .text p {
   font-size: 16px;
 }
 .playlist {
-  height: 800px;
+  max-height: 800px;
+  overflow: scroll;
   width: 90%;
   background-color: #f5f5f5;
   box-shadow: 0 0px 21px rgb(0 0 0 / 50%);
@@ -774,6 +775,9 @@ header .content .text p {
   padding: 36px;
   padding-top: 60px;
   display: none;
+}
+.playlist.active {
+  display: block;
 }
 .playlist .playlist-arrow {
   position: absolute;
@@ -845,15 +849,14 @@ header .content .text p {
 .item-title {
   font-size: 20px;
   font-weight: bold;
+  text-align: end;
 }
 .item-date {
   font-size: 18px;
   font-weight: bold;
   color: #0983c4;
 }
-.playlist.active {
-  display: block;
-}
+
 /************** Footer *****************/
 footer {
   width: 100%;
@@ -938,10 +941,11 @@ footer {
   position: absolute;
   left: 2000px;
   bottom: 71%;
-  z-index: 99;
+  z-index: 9999;
   opacity: 0;
   transition: all 0.4s ease-in-out;
 }
+/******* Payment Postions ******************************************************************/
 .payment-popup.pos-1 {
   opacity: 1;
   bottom: 76%;
@@ -1046,6 +1050,7 @@ footer {
 }
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+  /* Header and menu */
   header {
     height: 88vh;
   }
@@ -1093,10 +1098,200 @@ footer {
   .content .img {
     display: none;
   }
+
+  /* Videos Accordion */
+  .division {
+    width: 100%;
+    transition: all 0.5s ease-in;
+  }
+  .division-overlay {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  .division.active-mob {
+    margin-bottom: 880px;
+  }
+  .division .playlist-arrow {
+    display: none;
+  }
+  .division__box .box-img {
+    position: absolute;
+    top: -9px;
+    left: 17px;
+    max-width: 318px;
+    height: auto;
+  }
+  .division__box .box-play {
+    z-index: 12;
+  }
+  .division__title {
+    justify-content: flex-end;
+    width: 100%;
+    margin: 10px 0px;
+    z-index: 9;
+    position: absolute;
+    top: 20px;
+    right: 32px;
+    color: #fff;
+  }
+  .division__title span {
+    color: #fff;
+    margin-right: 80px;
+  }
+  .division__para {
+    position: absolute;
+    top: 80px;
+    right: 32px;
+    width: 50%;
+    color: #fff;
+  }
+
+  .playlist {
+    z-index: 999;
+    display: block;
+    position: absolute;
+    top: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    width: 94%;
+    transition: all 0.5s ease-in;
+  }
+  .playlist.active-mob {
+    position: absolute;
+    top: 224px;
+    left: 19px;
+    height: 800px;
+    opacity: 1;
+    padding: 36px;
+    padding-top: 60px;
+    max-height: 800px;
+    overflow: scroll;
+  }
+
+  #popup-video iframe {
+    width: 85%;
+    height: 50%;
+  }
+  /* Playlists postions *******************************************************************/
+  #playlist-1 {
+    position: absolute;
+    top: 225px;
+  }
+  #playlist-2 {
+    position: absolute;
+    top: calc(240px * 1 + 225px);
+  }
+  #playlist-3 {
+    position: absolute;
+    top: calc(240px * 2 + 225px);
+  }
+  #playlist-4 {
+    position: absolute;
+    top: calc(240px * 3 + 225px);
+  }
+  #playlist-5 {
+    position: absolute;
+    top: calc(240px * 4 + 225px);
+  }
+  #playlist-6 {
+    position: absolute;
+    top: calc(240px * 5 + 225px);
+  }
+  #playlist-7 {
+    position: absolute;
+    top: calc(240px * 6 + 225px);
+  }
+  .payment-popup {
+    border-radius: 40px;
+    border-bottom-right-radius: 5px;
+  }
+  .payment-popup img {
+    display: none;
+  }
+  /******* Payment Postions ******************************************************************/
+  .payment-popup.pos-1 {
+    bottom: 76%;
+    left: 19%;
+    left: 0;
+  }
+  .payment-popup.pos-2 {
+    bottom: 63%;
+    left: 25%;
+    left: 0;
+  }
+  .payment-popup.pos-3 {
+    bottom: 49%;
+    left: 23%;
+    left: 0;
+  }
+  .payment-popup.pos-4 {
+    bottom: 37%;
+    left: 24%;
+    left: 0;
+  }
+  .payment-popup.pos-5 {
+    bottom: 24%;
+    left: 30%;
+    left: 0;
+  }
+  .payment-popup.pos-6 {
+    bottom: 10%;
+    left: 36%;
+    left: 0;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+  .division__box .box-img {
+    display: none;
+  }
+  .division__title span {
+    /* new */
+    margin-right: auto;
+    margin-left: 60px;
+  }
+  .division__para {
+    /* new */
+    position: absolute;
+    top: 80px;
+    right: 32px;
+    width: 87%;
+    color: #fff;
+  }
+  .playlist-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 13px;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .search-bar input {
+    width: 100%;
+  }
+  .playlist-item {
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 8px !important;
+  }
+  .playlist-item .item-date {
+    margin-right: auto;
+    font-size: 16px;
+  }
+  .playlist-item .item-title {
+    font-size: 16px;
+  }
 }
 
 /* / X-Small devices (portrait phones, less than 576px) */
@@ -1104,4 +1299,23 @@ footer {
   header {
     height: 100vh;
   }
+}
+/* width */
+.playlist::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+.playlist::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.playlist::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.playlist::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

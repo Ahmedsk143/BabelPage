@@ -111,21 +111,48 @@ const playlists = document.querySelectorAll(".playlist");
 const divisions = document.querySelectorAll(".division");
 divisionWrapper.addEventListener("click", function (e) {
   if (e.target.className == "box-img") {
-    console.log(divisions);
+    // Controling the arrow
     divisions.forEach(function (division) {
       const arrow = division.querySelector(".playlist-arrow");
-      console.log(arrow.className);
       if (arrow.className.includes("active")) {
-        arrow.className = "playlist-arrow";
+        arrow.classList.remove("active");
       }
     });
-    e.target.parentElement.previousElementSibling.classList.add("active");
+    const playlistArrow =
+      e.target.parentElement.previousElementSibling.classList;
+    playlistArrow.add("active");
+    // Controling the playlists by addding active class to the playlist class
     const targetPlaylist = document.querySelector(e.target.dataset.target);
     playlists.forEach(function (playlist) {
       if (playlist == targetPlaylist) {
         playlist.classList.add("active");
       } else {
         playlist.classList.remove("active");
+      }
+    });
+  }
+  //   For the mobile accodion
+  if (e.target.className == "division-overlay") {
+    // Controling the space and arrow
+    divisions.forEach(function (division) {
+      if (
+        (division.className.includes("active-mob") &&
+          division.className != e.target.parentElement.className) ||
+        division.className != e.target.parentElement.className
+      ) {
+        division.classList.remove("active-mob");
+      } else {
+        division.classList.toggle("active-mob");
+      }
+    });
+    // control which playlist is active
+    const targetPlaylist = document.querySelector(e.target.dataset.mobile);
+    playlists.forEach(function (playlist) {
+      playlist.classList.remove("active");
+      if (playlist == targetPlaylist) {
+        playlist.classList.toggle("active-mob");
+      } else {
+        playlist.classList.remove("active-mob");
       }
     });
   }
@@ -446,4 +473,19 @@ function showPop(num) {
     popupValue6.textContent = "NBEGCASD55";
   }
 }
+function hidePop() {
+  if (popup.className != "payment-popup") {
+    popup.className = "payment-popup";
+  }
+}
+document.querySelector("body").addEventListener("click", function (e) {
+  console.log(e.target.className);
+  if (!e.target.className.includes("stay")) {
+    hidePop();
+    const ils = document.querySelectorAll(".payment ul li");
+    ils.forEach(function (e) {
+      e.classList.remove("lg");
+    });
+  }
+});
 ///////////////////////////////////////////////////////////////////////////

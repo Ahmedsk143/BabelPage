@@ -193,10 +193,10 @@
     </section>
     <main id="know-more">
       <div class="container">
-        <div class="row">
-          <div class="col-8">
+        <div class="row" style="position: relative">
+          <div class="col-lg-8">
             <!-- Playlist for organization 1 -->
-            <div class="playlist active" id="playlist-1">
+            <div class="playlist active active-mob" id="playlist-1">
               <div class="playlist-header">
                 <form class="search-bar" id="form-1">
                   <input
@@ -211,6 +211,48 @@
                 </button>
               </div>
               <ul class="playlist-items">
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      فكرة التعامل التكاملي مثل الترابط بين الادارات
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                      onclick="showVideo('https://www.youtube.com/embed/M2nejllFJbM')"
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      فكرة التعامل التكاملي مثل الترابط بين الادارات
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                      onclick="showVideo('https://www.youtube.com/embed/M2nejllFJbM')"
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
+                <li class="playlist-item">
+                  <div>
+                    <span class="item-title">
+                      فكرة التعامل التكاملي مثل الترابط بين الادارات
+                    </span>
+                    <img
+                      class="item-icon"
+                      src="./assets//youtube-play.png"
+                      alt=""
+                      onclick="showVideo('https://www.youtube.com/embed/M2nejllFJbM')"
+                    />
+                  </div>
+                  <span class="item-date">يوليو 4 , 2022</span>
+                </li>
                 <li class="playlist-item">
                   <div>
                     <span class="item-title">
@@ -1051,10 +1093,11 @@
               </ul>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-lg-4">
             <div class="divisions">
               <!-- Organization 1 -->
-              <div class="division">
+              <div class="division div-1 active-mob">
+                <div class="division-overlay" data-mobile="#playlist-1"></div>
                 <div class="playlist-arrow active">
                   <img src="./assets//right arrow.svg" alt="" />
                 </div>
@@ -1082,7 +1125,8 @@
                 </div>
               </div>
               <!-- Organization 2 -->
-              <div class="division">
+              <div class="division div-2">
+                <div class="division-overlay" data-mobile="#playlist-2"></div>
                 <div class="playlist-arrow">
                   <img src="./assets//right arrow.svg" alt="" />
                 </div>
@@ -1109,7 +1153,9 @@
                 </div>
               </div>
               <!-- Organization 3 -->
-              <div class="division">
+              <div class="division div-3">
+                <div class="division-overlay" data-mobile="#playlist-3"></div>
+
                 <div class="playlist-arrow">
                   <img src="./assets//right arrow.svg" alt="" />
                 </div>
@@ -1136,7 +1182,9 @@
                 </div>
               </div>
               <!-- Organization 4 -->
-              <div class="division">
+              <div class="division div-4">
+                <div class="division-overlay" data-mobile="#playlist-4"></div>
+
                 <div class="playlist-arrow">
                   <img src="./assets//right arrow.svg" alt="" />
                 </div>
@@ -1163,7 +1211,8 @@
                 </div>
               </div>
               <!-- Organization 5 -->
-              <div class="division">
+              <div class="division div-5">
+                <div class="division-overlay" data-mobile="#playlist-5"></div>
                 <div class="playlist-arrow">
                   <img src="./assets//right arrow.svg" alt="" />
                 </div>
@@ -1190,7 +1239,8 @@
                 </div>
               </div>
               <!-- Organization  6 -->
-              <div class="division">
+              <div class="division div-6">
+                <div class="division-overlay" data-mobile="#playlist-6"></div>
                 <div class="playlist-arrow">
                   <img src="./assets//right arrow.svg" alt="" />
                 </div>
@@ -1217,7 +1267,8 @@
                 </div>
               </div>
               <!-- Organization 7 -->
-              <div class="division">
+              <div class="division div-7">
+                <div class="division-overlay" data-mobile="#playlist-7"></div>
                 <div class="playlist-arrow">
                   <img src="./assets//right arrow.svg" alt="" />
                 </div>
@@ -1251,7 +1302,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-4">
+          <div class="d-none d-lg-block col-lg-4">
             <div class="to-customers">
               <h4 class="footer--title">عملائنا</h4>
               <p>
@@ -1273,56 +1324,55 @@
             <div class="payment">
               <h4 class="footer--title">طرق الدفع</h4>
               <ul>
-                <li class="green dot" onclick="showPop(1)">
+                <li class="green dot stay" onclick="showPop(1)">
                   البنك الاهلي المصري (جنية مصري)
                 </li>
-                <li class="green dot" onclick="showPop(2)">
+                <li class="green dot stay" onclick="showPop(2)">
                   البنك الاهلي المصري (دولار)
                 </li>
-                <li class="blue dot" onclick="showPop(3)">
+                <li class="blue dot stay" onclick="showPop(3)">
                   مصرف الراجحي (ريال سعودي)
                 </li>
-                <li class="orange dot" onclick="showPop(4)">
+                <li class="orange dot stay" onclick="showPop(4)">
                   التجاري وفا بنك (جنية مصري)
                 </li>
-                <li class="orange dot" onclick="showPop(5)">
+                <li class="orange dot stay" onclick="showPop(5)">
                   التجاري وفا بنك (دولار)
                 </li>
-                <li class="red dot" onclick="showPop(6)">فودافون كاش</li>
-
-                <div class="payment-popup">
-                  <img src="./assets//AhlyImg.svg" alt="" />
-                  <div class="popup-item i-1">
-                    <span class="key"></span>
-                    <span class="value"></span>
+                <li class="red dot stay" onclick="showPop(6)">فودافون كاش</li>
+                <div class="payment-popup stay">
+                  <img src="./assets//AhlyImg.svg" alt="" class="stay" />
+                  <div class="popup-item i-1 stay">
+                    <span class="key stay"></span>
+                    <span class="value stay"></span>
                   </div>
-                  <div class="popup-item i-2">
-                    <span class="key"></span>
-                    <span class="value"></span>
+                  <div class="popup-item i-2 stay">
+                    <span class="key stay"></span>
+                    <span class="value stay"></span>
                   </div>
                   <div
-                    class="popup-item i-3"
+                    class="popup-item i-3 stay"
                     dir="rtl"
                     style="text-align: start"
                   >
-                    <span class="key"></span>
-                    <span class="value"></span>
+                    <span class="key stay"></span>
+                    <span class="value stay"></span>
                   </div>
-                  <div class="popup-item i-4">
-                    <span class="key"></span>
-                    <span class="value"></span>
+                  <div class="popup-item i-4 stay">
+                    <span class="key stay"></span>
+                    <span class="value stay"></span>
                   </div>
-                  <div class="popup-item i-5" style="text-align: start">
-                    <span class="key"></span>
-                    <span class="value"></span>
+                  <div class="popup-item i-5 stay" style="text-align: start">
+                    <span class="key stay"></span>
+                    <span class="value stay"></span>
                   </div>
                   <div
-                    class="popup-item i-6"
+                    class="popup-item i-6 stay"
                     dir="rtl"
                     style="text-align: start"
                   >
-                    <span class="key"></span>
-                    <span class="value"></span>
+                    <span class="key stay"></span>
+                    <span class="value stay"></span>
                   </div>
                 </div>
               </ul>
