@@ -1,7 +1,9 @@
 // Menu function
 function showMenu() {
   const menu = document.querySelector("#menu");
+  const bars = document.querySelector(".menu-bar");
   menu.classList.toggle("active");
+  bars.classList.toggle("active");
 }
 
 /// Search functions ///

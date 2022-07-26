@@ -746,8 +746,23 @@ header .content .text p {
   bottom: 11px;
   left: 10px;
   cursor: pointer;
-  transform: all 0.4s ease-in-out;
+  animation: glow 1s infinite alternate;
 }
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px #89a7ca;
+  }
+  to {
+    box-shadow: 0 0 10px 10px #89a7ca;
+  }
+}
+/* .division__box .box-play::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  z-index: 888;
+  background-color: #0c75b7;
+} */
 .division__box .box-play:hover {
   transform: translateY(-2px);
 }
@@ -1057,26 +1072,33 @@ footer {
     display: block;
     position: relative;
     margin-bottom: 30px;
+    height: 50px;
   }
   header nav ul {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    top: 63px;
+    left: 0;
+    border-radius: 3px;
     height: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    row-gap: 0px;
-    padding: 0px;
-    margin-bottom: 0px;
-    border-bottom: 0px solid #fff;
     transition: all 0.5s ease-in;
     overflow: hidden;
+    padding: 0px;
+    row-gap: 13px;
+  }
+  header nav ul a {
+    color: #0444fe !important;
+  }
+  header nav ul a:hover {
+    color: #0435ca !important;
   }
   header nav ul.active {
-    padding: 13px 0px;
-    margin-bottom: 35px;
-    border-bottom: 1px solid #fff;
-    row-gap: 13px;
     height: 225px;
-    margin-bottom: -78px;
+    padding: 10px 0px;
   }
   .menu-bar {
     display: block;
@@ -1090,6 +1112,16 @@ footer {
     margin-bottom: 10px;
     background-color: #fff;
     border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+  }
+  .menu-bar.active .bar:first-child {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  .menu-bar.active .bar:nth-child(2) {
+    display: none;
+  }
+  .menu-bar.active .bar:last-child {
+    transform: rotate(-45deg);
   }
   .content {
     margin-top: 110px;
