@@ -958,7 +958,7 @@ footer {
   bottom: 71%;
   z-index: 9999;
   opacity: 0;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 /******* Payment Postions ******************************************************************/
 .payment-popup.pos-1 {
