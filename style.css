@@ -954,7 +954,7 @@ footer {
   width: 320px;
   color: #000;
   position: absolute;
-  left: 800px;
+  /* left: 800px; */
   bottom: 71%;
   z-index: 9999;
   opacity: 0;
