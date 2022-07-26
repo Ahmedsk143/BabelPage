@@ -1,11 +1,11 @@
 /* Normalization */
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 body {
   box-sizing: border-box;
   background-color: #13111a;
-  overflow: hidden;
   font-family: "Cairo", sans-serif !important;
 }
 * *::after,
