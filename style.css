@@ -1,7 +1,6 @@
 /* Normalization */
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 body {
   box-sizing: border-box;
@@ -1278,6 +1277,9 @@ footer {
   .payment-popup.pos-6 {
     bottom: 10%;
     left: 36%;
+    left: 0;
+  }
+  .payment-popup {
     left: 0;
   }
 }
