@@ -955,7 +955,8 @@ footer {
   color: #000;
   position: absolute;
   /* left: 800px; */
-  bottom: 71%;
+  bottom: 85%;
+  left: 95%;
   z-index: 9999;
   opacity: 0;
   transition: all 0.2s ease-in-out;
