@@ -46,12 +46,25 @@ h6 {
 header {
   position: relative;
   width: 100%;
-  background-image: url(./assets/headerBK.png);
+  /* background-image: url(./assets/headerBK.png); */
+  background: #0c74b7;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  height: 80vh;
+  height: 100vh;
+}
+header .curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-image: url(./assets/curve.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -1px;
 }
 header nav {
   display: flex;
@@ -731,47 +744,49 @@ header .content .text p {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 210px;
+  height: 180px;
+  max-width: 100%;
+  overflow: hidden;
   cursor: pointer;
-}
-.division__box .box-img {
-  position: absolute;
-  top: -23px;
 }
 .division__box .box-play {
   position: absolute;
   width: 50px;
   height: 50px;
-  bottom: 11px;
-  left: 10px;
+  bottom: 10px;
+  left: 15px;
   cursor: pointer;
-  animation: glow 1s infinite alternate;
+  z-index: 999;
 }
-@keyframes glow {
-  from {
-    box-shadow: 0 0 10px -10px #89a7ca;
-  }
-  to {
-    box-shadow: 0 0 10px 10px #89a7ca;
-  }
-}
-/* .division__box .box-play::after {
-  content: "";
+.division__box .box-playBK {
+  position: absolute;
   width: 60px;
   height: 60px;
-  z-index: 888;
-  background-color: #0c75b7;
-} */
-.division__box .box-play:hover {
-  transform: translateY(-2px);
+  bottom: 5px;
+  left: 9px;
+  cursor: pointer;
+  animation: glow 0.8s infinite alternate;
 }
+
+@keyframes glow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .division__box .box-play:hover {
+  transform: translateY(-2px);
+} */
 .division__title {
   display: flex;
   justify-content: space-between;
   margin: 10px 0px;
 }
 .division__title span {
-  color: rgba(10, 1, 1, 0.774);
+  color: rgba(10, 1, 1, 0.555);
 }
 .division__para {
   text-align: end;
@@ -819,8 +834,16 @@ header .content .text p {
   height: 66px;
   position: absolute;
   right: 0;
+  filter: saturate(0);
+  transition: all 0.2s ease-in-out;
 }
-
+.search-bar input:focus + img {
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  right: 0;
+  filter: none;
+}
 .search-bar input {
   outline: none;
   border: 1px solid transparent;
@@ -855,19 +878,17 @@ header .content .text p {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .item-icon:hover {
   transform: translateY(-2px);
 }
 .item-title {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
   text-align: end;
 }
 .item-date {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 15px;
   color: #0983c4;
 }
 
@@ -1054,19 +1075,25 @@ footer {
 }
 /* X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {
+  header {
+    height: 96vh;
+  }
 }
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
   header {
-    height: 66vh;
+    height: 82vh;
   }
 }
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   /* Header and menu */
   header {
-    height: 88vh;
+    height: 67vh;
+  }
+  header .curve {
+    display: none;
   }
   header nav {
     display: block;
@@ -1135,13 +1162,65 @@ footer {
     width: 100%;
     transition: all 0.5s ease-in;
   }
+  .division__box {
+    transition: all 0.4s ease-in-out;
+  }
+  .division__box .box-img {
+    max-width: 100%;
+    height: 180px;
+  }
+  .division__title {
+    text-align: end;
+    padding: 0px 10px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    z-index: 9;
+    display: none;
+  }
+  .division__title span {
+    color: #fff;
+  }
+  .division__para {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    width: 87%;
+    color: #fff;
+    z-index: 9;
+    display: none;
+  }
   .division-overlay {
-    z-index: 10;
+    z-index: 5;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+    background-image: url("./assets/thumbnails.png");
+    transition: all 0.3s ease-in-out;
+  }
+  .division-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.116);
+    border-radius: 27px;
+  }
+  .division-overlay:hover + div + div + div,
+  .division-overlay:hover + div + div + div + div {
+    display: flex;
+  }
+  .division__box {
+    border: 1px solid #0c75b7;
+    background-color: #fc841c;
+    border-radius: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 180px;
+    width: 100%;
+    overflow: hidden;
     cursor: pointer;
   }
   .division.active-mob {
@@ -1152,34 +1231,12 @@ footer {
   }
   .division__box .box-img {
     position: absolute;
-    top: -9px;
-    left: 17px;
-    max-width: 318px;
+    left: 0;
+    max-width: 320px;
     height: auto;
   }
   .division__box .box-play {
     z-index: 12;
-  }
-  .division__title {
-    justify-content: flex-end;
-    width: 100%;
-    margin: 10px 0px;
-    z-index: 9;
-    position: absolute;
-    top: 20px;
-    right: 32px;
-    color: #fff;
-  }
-  .division__title span {
-    color: #fff;
-    margin-right: 80px;
-  }
-  .division__para {
-    position: absolute;
-    top: 80px;
-    right: 32px;
-    width: 50%;
-    color: #fff;
   }
 
   .playlist {
@@ -1286,21 +1343,35 @@ footer {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-  .division__box .box-img {
-    display: none;
+  .division__box {
+    transition: all 0.4s ease-in-out;
   }
-  .division__title span {
-    /* new */
-    margin-right: auto;
-    margin-left: 60px;
+  .division__box .box-img {
+    max-width: 100%;
+    height: 180px;
+  }
+  .division__title {
+    text-align: end;
+    width: 100%;
+    padding: 0px 10px;
+    left: 0;
   }
   .division__para {
-    /* new */
     position: absolute;
     top: 80px;
-    right: 32px;
+    right: 10px;
     width: 87%;
     color: #fff;
+    z-index: 9;
+    display: none;
+  }
+  .division-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.274);
+    border-radius: 27px;
+  }
+  .division-overlay:hover + div + div + div,
+  .division-overlay:hover + div + div + div + div {
+    display: flex;
   }
   .playlist-header {
     display: flex;
@@ -1330,9 +1401,6 @@ footer {
 
 /* / X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  header {
-    height: 100vh;
-  }
 }
 /* width */
 .playlist::-webkit-scrollbar {
