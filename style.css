@@ -1305,6 +1305,13 @@ footer {
   .payment-popup img {
     display: none;
   }
+
+  footer {
+    text-align: center;
+  }
+  footer .phone {
+    justify-content: center;
+  }
   /******* Payment Postions ******************************************************************/
   .payment-popup.pos-1 {
     bottom: 76%;
@@ -1343,6 +1350,9 @@ footer {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+  header {
+    height: 75vh;
+  }
   .division__box {
     transition: all 0.4s ease-in-out;
   }
@@ -1401,6 +1411,12 @@ footer {
 
 /* / X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  header {
+    height: 90vh;
+  }
+  header .content .text .button.button--outline {
+    margin: 0px 0px 12px 0px !important;
+  }
 }
 /* width */
 .playlist::-webkit-scrollbar {
