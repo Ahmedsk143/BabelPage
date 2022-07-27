@@ -1388,7 +1388,7 @@ footer {
     --boxWidth: 67vw;
   }
   header {
-    height: 75vh;
+    height: 65vh;
   }
   /* .division__box .box-img {
     max-width: 100%;
@@ -1446,15 +1446,60 @@ footer {
   :root {
     --boxWidth: 95vw;
   }
-  header {
-    height: 90vh;
-  }
+  /* header {
+    height: 100vh;
+  } */
   header .content .text .button.button--outline {
     margin: 0px 0px 12px 0px !important;
   }
   .search-bar input {
     padding: 20px 71px 20px 18px;
     font-size: 14px;
+  }
+}
+
+/* Vertical queries  */
+
+/* Tablets */
+@media (min-height: 768px) and (max-width: 1280px) {
+  header {
+    height: 47vh;
+  }
+}
+/* Mobile phones different heights */
+@media (max-height: 660px) and (max-width: 991.98px) {
+  header {
+    height: 80vh;
+  }
+}
+@media (max-height: 590px) and (max-width: 991.98px) {
+  header {
+    height: 85vh;
+  }
+}
+@media (max-height: 540px) and (max-width: 991.98px) {
+  header {
+    height: 90vh;
+  }
+}
+@media (max-height: 520px) and (max-width: 991.98px) {
+  header {
+    height: 100vh;
+  }
+}
+@media (max-height: 445px) and (max-width: 991.98px) {
+  header {
+    height: 120vh;
+  }
+}
+@media (max-height: 366px) and (max-width: 991.98px) {
+  header {
+    height: 150vh;
+  }
+}
+@media (max-height: 300px) and (max-width: 991.98px) {
+  header {
+    height: 200vh;
   }
 }
 /* width */
