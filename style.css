@@ -905,7 +905,7 @@ footer {
   min-height: 300px;
   color: #fff;
   padding: 25px;
-  padding-right: 75px;
+  /* padding-right: 75px; */
   text-align: end;
   margin-top: 200px;
 }
