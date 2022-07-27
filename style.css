@@ -1135,10 +1135,10 @@ footer {
     row-gap: 13px;
   }
   header nav ul a {
-    color: #0444fe !important;
+    color: #0c74b7 !important;
   }
   header nav ul a:hover {
-    color: #001e76 !important;
+    color: #074c89 !important;
   }
   header nav ul.active {
     height: 225px;
