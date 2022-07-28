@@ -1107,7 +1107,7 @@ footer {
   }
   /* Header and menu */
   header {
-    height: 67vh;
+    height: 45vh;
   }
   header .curve {
     display: none;
@@ -1168,7 +1168,7 @@ footer {
     transform: rotate(-135deg) translate(7px, 0px);
   }
   .content {
-    margin-top: 110px;
+    margin-top: 20px;
   }
   .content .img {
     display: none;
@@ -1460,16 +1460,17 @@ footer {
 
 /* Vertical queries  */
 
+/* Landscape */
 /* Tablets */
-@media (min-height: 768px) and (max-width: 1280px) {
+@media (min-height: 768px) and (min-width: 992px) {
   header {
-    height: 47vh;
+    height: 79vh;
   }
 }
 /* Mobile phones different heights */
 @media (max-height: 660px) and (max-width: 991.98px) {
   header {
-    height: 80vh;
+    height: 56vh;
   }
 }
 @media (max-height: 590px) and (max-width: 991.98px) {
