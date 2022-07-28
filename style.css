@@ -1387,7 +1387,7 @@ footer {
     --boxWidth: 67vw;
   }
   header {
-    height: 65vh;
+    height: 56vh;
   }
   /* .division__box .box-img {
     max-width: 100%;
@@ -1457,19 +1457,33 @@ footer {
   }
 }
 
+@media (max-width: 300px) {
+  header {
+    height: 100vh;
+  }
+}
 /* Vertical queries  */
 
-/* Landscape */
 /* Tablets */
 @media (min-height: 768px) and (min-width: 992px) {
   header {
     height: 79vh;
   }
 }
+@media (min-height: 910px) and (max-width: 992px) {
+  header {
+    height: 33vh;
+  }
+}
 /* Mobile phones different heights */
+@media (min-height: 800px) and (max-width: 575.98px) {
+  header {
+    height: 44vh;
+  }
+}
 @media (max-height: 660px) and (max-width: 991.98px) {
   header {
-    height: 56vh;
+    height: 59vh;
   }
 }
 @media (max-height: 590px) and (max-width: 991.98px) {
