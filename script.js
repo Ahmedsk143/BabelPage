@@ -107,7 +107,7 @@ form7Input.addEventListener("keyup", function (e) {
   });
 });
 ///////////////////////////////////////////////////////////////////////////
-/// Choosing the right list functions
+/// Choosing the right list functions to show
 const divisionWrapper = document.querySelector(".divisions");
 const playlists = document.querySelectorAll(".playlist");
 const divisions = document.querySelectorAll(".division");
@@ -318,11 +318,13 @@ const popup = document.querySelector(".payment-popup");
 const ils = document.querySelectorAll(".payment ul li");
 function showPop(num) {
   if (num == 1) {
+    // Show and hide the popup
     if (popup.className.includes("pos-1")) {
       popup.classList.toggle("pos-1");
     } else {
       popup.className = "payment-popup pos-1";
     }
+    // Toggle the dot size
     const li = document.querySelector(".payment ul li:nth-child(1)");
     ils.forEach(function (e) {
       if (e != li) {
@@ -330,6 +332,7 @@ function showPop(num) {
       }
     });
     li.classList.toggle("lg");
+    // Fill in the popup content as required per method
     popupImg.src = "./assets/Al-Ahly.svg";
     popupKey1.textContent = "الاسم:";
     popupValue1.textContent = "شركة صابر الشحات السيد وشريكه";
@@ -343,7 +346,9 @@ function showPop(num) {
     popupValue5.textContent = "EG47024654512313216";
     popupKey6.textContent = "سويفت كود:";
     popupValue6.textContent = "NBEGCASD55";
-  } else if (num == 2) {
+  }
+  // The popup for item 2 and every thing is the same of the rest
+  else if (num == 2) {
     if (popup.className.includes("pos-2")) {
       popup.classList.toggle("pos-2");
     } else {
@@ -475,6 +480,7 @@ function showPop(num) {
     popupValue6.textContent = "NBEGCASD55";
   }
 }
+// To hide the payment popup when clicked at any element that doesn't have the stay class
 function hidePop() {
   if (popup.className != "payment-popup") {
     popup.className = "payment-popup";
@@ -490,4 +496,3 @@ document.querySelector("body").addEventListener("click", function (e) {
     });
   }
 });
-///////////////////////////////////////////////////////////////////////////

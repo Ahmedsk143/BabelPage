@@ -35,25 +35,26 @@ h5,
 h6 {
   margin: 0;
 }
-:root {
-  --boxWidth: 370px;
-  --boxHeight: calc(var(--boxWidth) * 9 / 16);
-}
-/* Fonts */
+/***** Fonts ******/
 @font-face {
   font-family: "Rawy";
   src: url("./assets/fonts/ArbFONTS-VIP-Rawy-Bold1.ttf");
   font-style: bold;
 }
-
-/* Header styles */
+/***** Variables *****/
+:root {
+  /* These variables are used to keep the thumbnails of the videos at 16:9 ratio */
+  --boxWidth: 370px;
+  --boxHeight: calc(var(--boxWidth) * 9 / 16);
+}
+/************** Header Section *************/
 header {
   position: relative;
   width: 100%;
   height: auto;
   padding-bottom: 160px;
   /* background-image: url(./assets/headerBK.png); */
-  background: #0c74b7;
+  background: linear-gradient(45deg, #049ddc, #134f94);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,7 +128,7 @@ header .content .text p {
   margin: 30px 0px;
 }
 
-/************** Slider ****************/
+/************** Testimonials Section ****************/
 .testim {
   text-align: center;
   width: 100%;
@@ -332,13 +333,13 @@ header .content .text p {
   }
 
   70% {
-    -webkit-box-shadow: 0px 0px 10px 5px #ea830e;
-    box-shadow: 0px 0px 10px 5px #ea830e;
+    -webkit-box-shadow: 0px 0px 10px 5px #0c75b7;
+    box-shadow: 0px 0px 10px 5px #0c75b7;
   }
 
   100% {
-    -webkit-box-shadow: 0px 0px 0px 0px #ea830e;
-    box-shadow: 0px 0px 0px 0px #ea830e;
+    -webkit-box-shadow: 0px 0px 0px 0px #0c75b7;
+    box-shadow: 0px 0px 0px 0px #0c75b7;
   }
 }
 
@@ -354,13 +355,13 @@ header .content .text p {
   }
 
   70% {
-    -moz-box-shadow: 0px 0px 10px 5px #ea830e;
-    box-shadow: 0px 0px 10px 5px #ea830e;
+    -moz-box-shadow: 0px 0px 10px 5px #0c75b7;
+    box-shadow: 0px 0px 10px 5px #0c75b7;
   }
 
   100% {
-    -moz-box-shadow: 0px 0px 0px 0px #ea830e;
-    box-shadow: 0px 0px 0px 0px #ea830e;
+    -moz-box-shadow: 0px 0px 0px 0px #0c75b7;
+    box-shadow: 0px 0px 0px 0px #0c75b7;
   }
 }
 
@@ -376,13 +377,13 @@ header .content .text p {
   }
 
   70% {
-    -ms-box-shadow: 0px 0px 10px 5px #ea830e;
-    box-shadow: 0px 0px 10px 5px #ea830e;
+    -ms-box-shadow: 0px 0px 10px 5px #0c75b7;
+    box-shadow: 0px 0px 10px 5px #0c75b7;
   }
 
   100% {
-    -ms-box-shadow: 0px 0px 0px 0px #ea830e;
-    box-shadow: 0px 0px 0px 0px #ea830e;
+    -ms-box-shadow: 0px 0px 0px 0px #0c75b7;
+    box-shadow: 0px 0px 0px 0px #0c75b7;
   }
 }
 
@@ -398,13 +399,13 @@ header .content .text p {
   }
 
   70% {
-    -o-box-shadow: 0px 0px 10px 5px #ea830e;
-    box-shadow: 0px 0px 10px 5px #ea830e;
+    -o-box-shadow: 0px 0px 10px 5px #0c75b7;
+    box-shadow: 0px 0px 10px 5px #0c75b7;
   }
 
   100% {
-    -o-box-shadow: 0px 0px 0px 0px #ea830e;
-    box-shadow: 0px 0px 0px 0px #ea830e;
+    -o-box-shadow: 0px 0px 0px 0px #0c75b7;
+    box-shadow: 0px 0px 0px 0px #0c75b7;
   }
 }
 
@@ -418,11 +419,11 @@ header .content .text p {
   }
 
   70% {
-    box-shadow: 0px 0px 10px 5px #ea830e;
+    box-shadow: 0px 0px 10px 5px #0c75b7;
   }
 
   100% {
-    box-shadow: 0px 0px 0px 0px #ea830e;
+    box-shadow: 0px 0px 0px 0px #0c75b7;
   }
 }
 
@@ -713,7 +714,8 @@ header .content .text p {
     line-height: 25px;
   }
 }
-/************** Video Library ****************/
+
+/************** Video Library Section ****************/
 #know-more {
   padding-top: 60px;
 }
@@ -780,9 +782,6 @@ header .content .text p {
   }
 }
 
-/* .division__box .box-play:hover {
-  transform: translateY(-2px);
-} */
 .division__title {
   display: flex;
   justify-content: space-between;
@@ -795,6 +794,7 @@ header .content .text p {
   text-align: end;
   font-size: 16px;
 }
+
 .playlist {
   max-height: 800px;
   overflow: scroll;
@@ -810,6 +810,9 @@ header .content .text p {
 }
 .playlist.active {
   display: block;
+}
+.playlist::-webkit-scrollbar {
+  width: 0px;
 }
 .playlist .playlist-arrow {
   position: absolute;
@@ -855,7 +858,6 @@ header .content .text p {
 }
 .search-bar input:focus,
 .search-bar input:focus-visible {
-  /* border: 1px solid rgba(26, 25, 25, 0.377); */
   border: 1px solid #0c75b7;
 }
 .playlist-items {
@@ -897,7 +899,7 @@ header .content .text p {
   vertical-align: bottom;
 }
 
-/************** Footer *****************/
+/************** The Footer *****************/
 footer {
   width: 100%;
   background: #212429;
@@ -970,6 +972,7 @@ footer {
 .payment ul li.red::after {
   background-color: #cb0400;
 }
+/************ The payment popup *********/
 .payment-popup {
   background-color: #f5f5f5;
   border-radius: 40px;
@@ -986,7 +989,7 @@ footer {
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
-/******* Payment Postions ******************************************************************/
+/******* Payment Postions *************/
 .payment-popup.pos-1 {
   opacity: 1;
   bottom: 76%;
@@ -1034,35 +1037,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
-/************** Buttons **********************/
-.button:focus {
-  outline: 0;
-  box-shadow: none;
-}
-.button,
-.button:visited,
-.button:link {
-  font-size: 18px;
-  transition: all 0.1s ease-in-out;
-  color: #fff;
-  background-color: transparent;
-  border: none;
-}
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 10px #0006;
-}
-.button--primary {
-  background-color: #f98619;
-  border-radius: 8px;
-  padding: 8px 20px;
-}
-.button--outline {
-  border: 1px solid #0c75b7;
-  border-radius: 8px;
-  padding: 8px 20px;
-  border: 1px solid rgb(212, 212, 212);
-}
+
 /*  The popup video */
 #popup-video {
   position: fixed;
@@ -1080,6 +1055,7 @@ footer {
 #popup-video.active {
   display: flex;
 }
+
 /* X-Large devices (large desktops, more than 1400px) */
 @media (min-width: 1399.98px) {
   header {
@@ -1099,12 +1075,16 @@ footer {
     --boxWidth: 320px;
   }
 }
+/********************* End of desktop styles ***********************/
+
+/********************* Start of mobile and tables styles **************/
+
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   :root {
     --boxWidth: 75vw;
   }
-  /* Header and menu */
+  /******* Header and menu *********/
   header {
     padding-bottom: 30px;
   }
@@ -1172,7 +1152,7 @@ footer {
   .content .img {
     display: none;
   }
-  /* Testimonials */
+  /****** Testimonials ******/
   .testim {
     padding-top: 40px;
   }
@@ -1183,7 +1163,7 @@ footer {
   .testim .arrow.right {
     right: 6%;
   }
-  /* Videos Accordion */
+  /***** Videos Library *****/
   #know-more {
     position: relative;
     padding-top: 25px;
@@ -1222,10 +1202,6 @@ footer {
     opacity: 0;
     transition: all 0.3s ease-in-out;
   }
-  /* .division-overlay:hover {
-    background-color: rgba(0, 0, 0, 0.116);
-    border-radius: 27px;
-  } */
   .division-overlay:hover + div + div + div,
   .division-overlay:hover + div + div + div + div,
   .division-overlay:hover + div + div + div + div + div {
@@ -1296,10 +1272,13 @@ footer {
     width: 85%;
     height: 50%;
   }
-  /* Playlists postions *******************************************************************/
+  /****** The  Playlist postions in the mobile view - Careful here
+  **Everything is relative to the .row inside the #know-more main
+  **it is calculated precisely for each plyalist based on the number of the previous playlists
+   ******/
   #playlist-1 {
     position: absolute;
-    top: calc(var(--boxHeight) + 30px); /* Height of box 180px + 30px margin */
+    top: calc(var(--boxHeight) + 30px);
   }
   #playlist-2 {
     position: absolute;
@@ -1309,14 +1288,12 @@ footer {
   }
   #playlist-3 {
     position: absolute;
-    /* top: calc(210px * 2 + 220px); */
     top: calc(
       calc(var(--boxHeight) + 30px) * 2 + calc(var(--boxHeight) + 30px)
     );
   }
   #playlist-4 {
     position: absolute;
-    /* top: calc(210px * 3 + 220px); */
     top: calc(
       calc(var(--boxHeight) + 30px) * 3 + calc(var(--boxHeight) + 30px)
     );
@@ -1339,6 +1316,8 @@ footer {
       calc(var(--boxHeight) + 30px) * 6 + calc(var(--boxHeight) + 30px)
     );
   }
+
+  /******* The footer *********/
   .payment-popup {
     border-radius: 40px;
     border-bottom-right-radius: 5px;
@@ -1353,7 +1332,7 @@ footer {
   footer .phone {
     justify-content: center;
   }
-  /******* Payment Postions ******************************************************************/
+  /******* Payment popup postions ******/
   .payment-popup.pos-1 {
     bottom: 76%;
     left: 19%;
@@ -1394,35 +1373,6 @@ footer {
   :root {
     --boxWidth: 67vw;
   }
-  /* header {
-    height: 56vh;
-  } */
-  /* .division__box .box-img {
-    max-width: 100%;
-    height: 180px;
-  } */
-  /* .division__title {
-    text-align: end;
-    width: 100%;
-    padding: 0px 10px;
-    left: 0;
-  }
-  .division__para {
-    position: absolute;
-    top: 80px;
-    right: 10px;
-    width: 87%;
-    color: #fff;
-    z-index: 9;
-  } */
-  /* .division-overlay:hover {
-    background-color: rgba(0, 0, 0, 0.116);
-    border-radius: 27px;
-  } */
-  /* .division-overlay:hover + div + div + div,
-  .division-overlay:hover + div + div + div + div {
-    display: flex;
-  } */
   .playlist-header {
     display: flex;
     flex-direction: column;
@@ -1453,9 +1403,6 @@ footer {
   :root {
     --boxWidth: 95vw;
   }
-  /* header {
-    height: 100vh;
-  } */
   header .content .text .button.button--outline {
     margin: 0px 0px 12px 0px !important;
   }
@@ -1465,93 +1412,32 @@ footer {
   }
 }
 
-@media (max-width: 300px) {
-  /* header {
-    height: 100vh;
-  } */
+/************** Buttons *************/
+.button:focus {
+  outline: 0;
+  box-shadow: none;
 }
-/* Vertical queries  */
-
-/* large screens */
-/* @media (min-height: 620px) and (min-width: 1399.98px) {
-  header {
-    height: 68vh;
-  }
+.button,
+.button:visited,
+.button:link {
+  font-size: 18px;
+  transition: all 0.1s ease-in-out;
+  color: #fff;
+  background-color: transparent;
+  border: none;
 }
-@media (min-height: 599px) and (min-width: 993px) {
-  header {
-    height: 100vh;
-  }
-} */
-
-/* Tablets */
-/* @media (min-height: 768px) and (max-width: 992px) {
-  header {
-    height: 79vh;
-  }
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px #0006;
 }
-@media (min-height: 910px) and (max-width: 992px) {
-  header {
-    height: 33vh;
-  }
-} */
-/* Mobile phones different heights */
-/* @media (min-height: 800px) and (max-width: 575.98px) {
-  header {
-    height: 44vh;
-  }
+.button--primary {
+  background-color: #f98619;
+  border-radius: 8px;
+  padding: 8px 20px;
 }
-@media (max-height: 660px) and (max-width: 991.98px) {
-  header {
-    height: 59vh;
-  }
-}
-@media (max-height: 590px) and (max-width: 991.98px) {
-  header {
-    height: 85vh;
-  }
-}
-@media (max-height: 540px) and (max-width: 991.98px) {
-  header {
-    height: 90vh;
-  }
-}
-@media (max-height: 520px) and (max-width: 991.98px) {
-  header {
-    height: 100vh;
-  }
-}
-@media (max-height: 445px) and (max-width: 991.98px) {
-  header {
-    height: 120vh;
-  }
-}
-@media (max-height: 366px) and (max-width: 991.98px) {
-  header {
-    height: 150vh;
-  }
-}
-@media (max-height: 300px) and (max-width: 991.98px) {
-  header {
-    height: 200vh;
-  }
-} */
-/* width */
-.playlist::-webkit-scrollbar {
-  width: 0px;
-}
-
-/* Track */
-.playlist::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-.playlist::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-.playlist::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.button--outline {
+  border: 1px solid #0c75b7;
+  border-radius: 8px;
+  padding: 8px 20px;
+  border: 1px solid rgb(212, 212, 212);
 }
