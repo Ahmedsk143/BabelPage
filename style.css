@@ -46,7 +46,11 @@ h6 {
   /* These variables are used to keep the thumbnails of the videos at 16:9 ratio */
   --boxWidth: 370px;
   --boxHeight: calc(var(--boxWidth) * 9 / 16);
+  /* Colors */
+  --color-primary: #f98619;
+  --color-secondary: #0c75b7;
 }
+
 /************** Header Section *************/
 header {
   position: relative;
@@ -201,7 +205,7 @@ header .content .text p {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 1px solid #0c75b7;
+  border: 1px solid#0c75b7;
   margin: 0 10px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
@@ -333,13 +337,13 @@ header .content .text p {
   }
 
   70% {
-    -webkit-box-shadow: 0px 0px 10px 5px #0c75b7;
-    box-shadow: 0px 0px 10px 5px #0c75b7;
+    -webkit-box-shadow: 0px 0px 10px 5px#0c75b7;
+    box-shadow: 0px 0px 10px 5px#0c75b7;
   }
 
   100% {
-    -webkit-box-shadow: 0px 0px 0px 0px #0c75b7;
-    box-shadow: 0px 0px 0px 0px #0c75b7;
+    -webkit-box-shadow: 0px 0px 0px 0px#0c75b7;
+    box-shadow: 0px 0px 0px 0px#0c75b7;
   }
 }
 
@@ -355,13 +359,13 @@ header .content .text p {
   }
 
   70% {
-    -moz-box-shadow: 0px 0px 10px 5px #0c75b7;
-    box-shadow: 0px 0px 10px 5px #0c75b7;
+    -moz-box-shadow: 0px 0px 10px 5px#0c75b7;
+    box-shadow: 0px 0px 10px 5px#0c75b7;
   }
 
   100% {
-    -moz-box-shadow: 0px 0px 0px 0px #0c75b7;
-    box-shadow: 0px 0px 0px 0px #0c75b7;
+    -moz-box-shadow: 0px 0px 0px 0px#0c75b7;
+    box-shadow: 0px 0px 0px 0px#0c75b7;
   }
 }
 
@@ -377,13 +381,13 @@ header .content .text p {
   }
 
   70% {
-    -ms-box-shadow: 0px 0px 10px 5px #0c75b7;
-    box-shadow: 0px 0px 10px 5px #0c75b7;
+    -ms-box-shadow: 0px 0px 10px 5px#0c75b7;
+    box-shadow: 0px 0px 10px 5px#0c75b7;
   }
 
   100% {
-    -ms-box-shadow: 0px 0px 0px 0px #0c75b7;
-    box-shadow: 0px 0px 0px 0px #0c75b7;
+    -ms-box-shadow: 0px 0px 0px 0px#0c75b7;
+    box-shadow: 0px 0px 0px 0px#0c75b7;
   }
 }
 
@@ -399,13 +403,13 @@ header .content .text p {
   }
 
   70% {
-    -o-box-shadow: 0px 0px 10px 5px #0c75b7;
-    box-shadow: 0px 0px 10px 5px #0c75b7;
+    -o-box-shadow: 0px 0px 10px 5px#0c75b7;
+    box-shadow: 0px 0px 10px 5px#0c75b7;
   }
 
   100% {
-    -o-box-shadow: 0px 0px 0px 0px #0c75b7;
-    box-shadow: 0px 0px 0px 0px #0c75b7;
+    -o-box-shadow: 0px 0px 0px 0px#0c75b7;
+    box-shadow: 0px 0px 0px 0px#0c75b7;
   }
 }
 
@@ -419,11 +423,11 @@ header .content .text p {
   }
 
   70% {
-    box-shadow: 0px 0px 10px 5px #0c75b7;
+    box-shadow: 0px 0px 10px 5px#0c75b7;
   }
 
   100% {
-    box-shadow: 0px 0px 0px 0px #0c75b7;
+    box-shadow: 0px 0px 0px 0px#0c75b7;
   }
 }
 
@@ -743,7 +747,7 @@ header .content .text p {
 }
 .division__box {
   height: var(--boxHeight);
-  border: 1px solid #0c75b7;
+  border: 1px solid#0c75b7;
   border-radius: 27px;
   position: relative;
   width: 100%;
@@ -858,7 +862,7 @@ header .content .text p {
 }
 .search-bar input:focus,
 .search-bar input:focus-visible {
-  border: 1px solid #0c75b7;
+  border: 1px solid#0c75b7;
 }
 .playlist-items {
   padding: 0;
@@ -1211,7 +1215,7 @@ footer {
     height: 100%;
     width: 100%;
     position: relative;
-    border: 1px solid #0c75b7;
+    border: 1px solid#0c75b7;
     border-radius: 27px;
     overflow: hidden;
   }
@@ -1431,12 +1435,12 @@ footer {
   box-shadow: 0 5px 10px #0006;
 }
 .button--primary {
-  background-color: #f98619;
+  background-color: var(--color-primary);
   border-radius: 8px;
   padding: 8px 20px;
 }
 .button--outline {
-  border: 1px solid #0c75b7;
+  border: 1px solid#0c75b7;
   border-radius: 8px;
   padding: 8px 20px;
   border: 1px solid rgb(212, 212, 212);
